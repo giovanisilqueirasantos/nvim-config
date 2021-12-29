@@ -61,3 +61,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope
 keymap("n", "<leader>p", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
+
+-- Vimspector
+keymap("n", "<leader>dc", ":call vimspector#Continue()<CR>", opts)
+keymap("n", "<leader>dx", ":call vimspector#Reset()<CR>", opts)
+keymap("n", "<leader>dso", ":call vimspector#StepOut()<CR>", opts)
+keymap("n", "<leader>dsi", ":call vimspector#StepInto()<CR>", opts)
+keymap("n", "<leader>dsv", ":call vimspector#StepOver()<CR>", opts)
+keymap("n", "<leader>drc", ":call vimspector#RunToCursor()<CR>", opts)
+keymap("n", "<leader>db", ":call vimspector#ToggleBreakpoint()<CR>", opts)
+keymap("n", "<leader>dbx", ":call vimspector#ClearBreakpoints()<CR>", opts)

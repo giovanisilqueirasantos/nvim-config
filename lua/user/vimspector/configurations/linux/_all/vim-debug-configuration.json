@@ -1,0 +1,24 @@
+{
+  "configurations": {
+    "run": {
+      "adapter": "delve",
+      "filetypes": [ "go" ],
+      "variables": {},
+      "configuration": {
+        "request": "launch",
+        "program": "${fileDirname}",
+        "mode": "debug"
+      }
+    },
+    "run_test": {
+      "adapter": "delve",
+      "filetypes": [ "go" ],
+      "variables": {},
+      "configuration": {
+        "request": "launch",
+        "program": "${fileDirname}",
+        "mode": "test"
+      }
+    }
+  }
+}
