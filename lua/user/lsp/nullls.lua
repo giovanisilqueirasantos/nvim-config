@@ -17,10 +17,11 @@ null_ls.setup({
   end,
 	sources = {
 		-- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
     formatting.gofmt,
     formatting.goimports,
     diagnostics.golangci_lint,
+    formatting.autopep8,
+    diagnostics.pylint,
 	},
 })
