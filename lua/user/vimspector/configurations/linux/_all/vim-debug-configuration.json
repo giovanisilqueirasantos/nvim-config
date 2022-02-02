@@ -24,6 +24,12 @@
       "adapter": "debugpy",
       "filetypes": [ "python" ],
       "default": true,
+      "breakpoints": {
+        "exception": {
+          "all": "N",
+          "uncaught": "N"
+        }
+      },
       "configuration": {
         "name": "python debug",
         "type": "python",
@@ -33,6 +39,37 @@
         "console": "internalConsole",
         "debugOptions": [],
         "program": "${file}"
+      }
+    },
+    "run_node": {
+      "adapter": "vscode-node",
+      "breakpoints": {
+        "exception": {
+          "all": "N",
+          "uncaught": "N"
+        }
+      },
+      "configuration": {
+        "request": "launch",
+        "protocol": "auto",
+        "stopOnEntry": true,
+        "console": "internalConsole",
+        "program": "${workspaceRoot}/${file}",
+        "cwd": "${workspaceRoot}"
+      }
+    },
+    "run_node_express": {
+      "adapter": "vscode-node",
+      "breakpoints": {
+        "exception": {
+          "all": "N",
+          "uncaught": "N"
+        }
+      },
+      "configuration": {
+        "type": "node",
+        "request": "attach",
+        "skipFiles": ["node_modules/**/*.js", "<node_internals>/**/*.js"]
       }
     }
   }
